@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GenderCardComponent } from './gender-card.component';
+import { BmiCalculatorComponent } from './bmi-calculator.component';
 
-describe('GenderCardComponent', () => {
-  let component: GenderCardComponent;
-  let fixture: ComponentFixture<GenderCardComponent>;
+describe('BmiCalculatorComponent', () => {
+  let component: BmiCalculatorComponent;
+  let fixture: ComponentFixture<BmiCalculatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GenderCardComponent ]
+      declarations: [ BmiCalculatorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GenderCardComponent);
+    fixture = TestBed.createComponent(BmiCalculatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

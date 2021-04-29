@@ -1,10 +1,5 @@
-
-
-app-page-container{
-    width: 100vw;
-    height: 100vh;
-
-    display: grid;
+app-root{
+    display: flex;
     justify-content: center;
     align-items: center;
 }

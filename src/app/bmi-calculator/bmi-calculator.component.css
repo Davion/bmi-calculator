@@ -1,0 +1,8 @@
+.bmi-calc-container{
+    width: 500px;
+    height: 100vh;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
