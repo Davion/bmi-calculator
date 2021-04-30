@@ -1,8 +1,63 @@
 .bmi-calc-container{
-    width: 500px;
+    width: 100vw;
     height: 100vh;
 
-    display: grid;
+    background-color: #1e1e1e;
+
+    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bmi-calc-layout{
+    width: 50%;
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr 3fr 3fr 1fr;
+    grid-template-areas: 
+    "male female"
+    "height height"
+    "weight age"
+    "calc-btn calc-btn";
+    
+    gap: 2em;
+
+    padding: 1em;
+}
+
+.cards{
+    color: #fefefe;
+    background-color: #3c3c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+}
+
+.bmi-male{
+    grid-area: male;
+}
+
+.bmi-female{
+    grid-area: female;
+}
+
+.bmi-height{
+    grid-area: height;
+}
+
+.bmi-weight{
+    grid-area: weight;
+}
+
+.bmi-age{
+    grid-area: age;
+}
+
+.bmi-calc-btn{
+    grid-area: calc-btn;
+    border-radius: 15px;
 }
