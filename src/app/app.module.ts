@@ -1,8 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,9 +20,12 @@ import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

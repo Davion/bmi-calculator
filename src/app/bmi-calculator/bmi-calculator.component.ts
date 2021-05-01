@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BmiCalculatorComponent implements OnInit {
 
+  height: number = 140;
   constructor() { }
 
   ngOnInit(): void {

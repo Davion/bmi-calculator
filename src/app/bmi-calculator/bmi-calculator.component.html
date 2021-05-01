@@ -1,10 +1,25 @@
 <div class="bmi-calc-container">
     <div class="bmi-calc-layout">
-        <mat-card class="cards bmi-male">Male</mat-card>
-        <mat-card class="cards bmi-female">Female</mat-card>
-        <mat-card class="cards bmi-height">Height</mat-card>
+        <mat-card class="cards bmi-male">
+            <span class="material-icons">male</span>
+            Male
+        </mat-card>
+        <mat-card class="cards bmi-female">
+            <span class="material-icons">female</span>
+            Female
+        </mat-card>
+        <mat-card class="cards bmi-height">
+            <span>Height</span>
+            <span>
+                <mat-form-field>
+                    <input matInput type="number" [(ngModel)]="height"> 
+                </mat-form-field>
+                cm
+            </span>
+            <mat-slider color="primary" aria-label="unit(s)" class="slider" min="140" max="210" [(ngModel)]="height"></mat-slider>
+        </mat-card>
         <mat-card class="cards bmi-weight">Weight</mat-card>
         <mat-card class="cards bmi-age">Age</mat-card>
-        <button mat-raised-button color="primary" class="bmi-calc-btn">Calculate</button>
+        <button mat-raised-button color="primary" class="bmi-calc-btn">Calculate Your BMI</button>
     </div>
 </div>

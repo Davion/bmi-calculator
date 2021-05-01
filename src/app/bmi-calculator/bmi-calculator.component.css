@@ -47,6 +47,23 @@
 
 .bmi-height{
     grid-area: height;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input{
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.bmi-height .slider{
+    width: 80%;
 }
 
 .bmi-weight{
