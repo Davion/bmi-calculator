@@ -1,25 +1,41 @@
 <div class="bmi-calc-container">
     <div class="bmi-calc-layout">
         <mat-card class="cards bmi-male">
-            <span class="material-icons">male</span>
+            <span></span>
+            <mat-icon>male</mat-icon>
             Male
         </mat-card>
         <mat-card class="cards bmi-female">
-            <span class="material-icons">female</span>
+            <span></span>
+            <mat-icon >female</mat-icon>
             Female
         </mat-card>
         <mat-card class="cards bmi-height">
             <span>Height</span>
             <span>
                 <mat-form-field>
-                    <input matInput type="number" [(ngModel)]="height"> 
+                    <input matInput type="number" [(ngModel)]="height" class="card-value"> 
                 </mat-form-field>
                 cm
             </span>
-            <mat-slider color="primary" aria-label="unit(s)" class="slider" min="140" max="210" [(ngModel)]="height"></mat-slider>
+            <mat-slider color="primary" thumbLabel aria-label="unit(s)" class="slider" min="140" max="210" [(ngModel)]="height"></mat-slider>
         </mat-card>
-        <mat-card class="cards bmi-weight">Weight</mat-card>
-        <mat-card class="cards bmi-age">Age</mat-card>
+        <mat-card class="cards bmi-weight">
+            <label>Weight (Kg)</label>
+            <span class="card-value">{{weight}} </span>
+            <div class="plus-minus-btn-container">
+                <mat-icon>remove_circle_outline</mat-icon>
+                <mat-icon>add_circle_outline</mat-icon>
+            </div>
+        </mat-card>
+        <mat-card class="cards bmi-age">
+            <label>Age</label> 
+            <span class="card-value">{{age}}</span>
+            <div class="plus-minus-btn-container">
+                <mat-icon>remove_circle_outline</mat-icon>
+                <mat-icon>add_circle_outline</mat-icon>
+            </div>
+        </mat-card>
         <button mat-raised-button color="primary" class="bmi-calc-btn">Calculate Your BMI</button>
     </div>
 </div>

@@ -35,6 +35,11 @@
     align-items: center;
 
     border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .bmi-male{
@@ -47,11 +52,6 @@
 
 .bmi-height{
     grid-area: height;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 input{
@@ -77,4 +77,47 @@ input::-webkit-inner-spin-button {
 .bmi-calc-btn{
     grid-area: calc-btn;
     border-radius: 15px;
+}
+
+.bmi-male mat-icon,
+.bmi-female mat-icon{
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 4.5rem;
+}
+
+/* .bmi-height mat-form-field{
+    width: 5rem;
+} */
+
+.plus-minus-btn-container{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.plus-minus-btn-container mat-icon{
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+}
+
+.card-value{
+    font-weight: 400;
+    font-size: 4em;
+}
+
+
+@media only screen and (max-width: 770px){
+    .bmi-calc-layout{
+        width: 90%;
+    }
+
+    .plus-minus-btn-container{
+        justify-content: space-between;   
+    }
+
 }
