@@ -14,7 +14,7 @@
             <span>Height</span>
             <span>
                 <mat-form-field>
-                    <input matInput type="number" [(ngModel)]="height" class="card-value"> 
+                    <input matInput type="number" [(ngModel)]="height" class="card-value" min="140" max="220" (change)="checkHeight()"> 
                 </mat-form-field>
                 cm
             </span>
@@ -22,18 +22,22 @@
         </mat-card>
         <mat-card class="cards bmi-weight">
             <label>Weight (Kg)</label>
-            <span class="card-value">{{weight}} </span>
+            <mat-form-field>
+                <input matInput type="number" [(ngModel)]="weight" class="card-value" min="40" max="120" (change)="checkWeight()"> 
+            </mat-form-field>
             <div class="plus-minus-btn-container">
-                <mat-icon>remove_circle_outline</mat-icon>
-                <mat-icon>add_circle_outline</mat-icon>
+                <mat-icon (click)="subtWeight()">remove_circle_outline</mat-icon>
+                <mat-icon (click)="addWeight()">add_circle_outline</mat-icon>
             </div>
         </mat-card>
         <mat-card class="cards bmi-age">
             <label>Age</label> 
-            <span class="card-value">{{age}}</span>
+            <mat-form-field>
+                <input matInput type="number" [(ngModel)]="age" class="card-value" min="15" max="100" (change)="checkAge()"> 
+            </mat-form-field>
             <div class="plus-minus-btn-container">
-                <mat-icon>remove_circle_outline</mat-icon>
-                <mat-icon>add_circle_outline</mat-icon>
+                <mat-icon (click)="subtAge()">remove_circle_outline</mat-icon>
+                <mat-icon (click)="addAge()">add_circle_outline</mat-icon>
             </div>
         </mat-card>
         <button mat-raised-button color="primary" class="bmi-calc-btn">Calculate Your BMI</button>
