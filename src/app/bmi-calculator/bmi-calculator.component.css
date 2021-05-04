@@ -44,10 +44,14 @@
 
 .bmi-male{
     grid-area: male;
+
+    cursor: pointer;
 }
 
 .bmi-female{
     grid-area: female;
+
+    cursor: pointer;
 }
 
 .bmi-height{
@@ -86,6 +90,10 @@ input::-webkit-inner-spin-button {
     font-size: 4.5rem;
 }
 
+.selected-gender{
+    background-color: #5d5d5d;
+}
+
 .cards mat-form-field{
     width: 6rem;
     text-align: center;
@@ -109,15 +117,11 @@ input::-webkit-inner-spin-button {
     width: 2.5rem;
     height: 2.5rem;
     font-size: 2.5rem;
-
-    user-select: none;
 }
 
-/* .card-value{
-    font-weight: 400;
-    font-size: 4em;
-} */
-
+mat-icon{
+    user-select: none;
+}
 
 @media only screen and (max-width: 770px){
     .bmi-calc-layout{

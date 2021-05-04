@@ -1,11 +1,11 @@
 <div class="bmi-calc-container">
     <div class="bmi-calc-layout">
-        <mat-card class="cards bmi-male">
+        <mat-card class="cards bmi-male" [class.selected-gender]="gender == 1" (click)="selectMale()">
             <span></span>
             <mat-icon>male</mat-icon>
             Male
         </mat-card>
-        <mat-card class="cards bmi-female">
+        <mat-card class="cards bmi-female" [class.selected-gender]="gender == 0" (click)="selectFemale()">
             <span></span>
             <mat-icon >female</mat-icon>
             Female
@@ -14,7 +14,7 @@
             <span>Height</span>
             <span>
                 <mat-form-field>
-                    <input matInput type="number" [(ngModel)]="height" class="card-value" min="140" max="220" (change)="checkHeight()"> 
+                    <input matInput type="number" [(ngModel)]="height" min="140" max="220" (change)="checkHeight()"> 
                 </mat-form-field>
                 cm
             </span>
@@ -23,7 +23,7 @@
         <mat-card class="cards bmi-weight">
             <label>Weight (Kg)</label>
             <mat-form-field>
-                <input matInput type="number" [(ngModel)]="weight" class="card-value" min="40" max="120" (change)="checkWeight()"> 
+                <input matInput type="number" [(ngModel)]="weight" min="40" max="120" (change)="checkWeight()"> 
             </mat-form-field>
             <div class="plus-minus-btn-container">
                 <mat-icon (click)="subtWeight()">remove_circle_outline</mat-icon>
@@ -33,13 +33,13 @@
         <mat-card class="cards bmi-age">
             <label>Age</label> 
             <mat-form-field>
-                <input matInput type="number" [(ngModel)]="age" class="card-value" min="15" max="100" (change)="checkAge()"> 
+                <input matInput type="number" [(ngModel)]="age" min="15" max="100" (change)="checkAge()"> 
             </mat-form-field>
             <div class="plus-minus-btn-container">
                 <mat-icon (click)="subtAge()">remove_circle_outline</mat-icon>
                 <mat-icon (click)="addAge()">add_circle_outline</mat-icon>
             </div>
         </mat-card>
-        <button mat-raised-button color="primary" class="bmi-calc-btn">Calculate Your BMI</button>
+        <button mat-raised-button color="primary" class="bmi-calc-btn" (click)="calculateBmi()">Calculate Your BMI</button>
     </div>
 </div>

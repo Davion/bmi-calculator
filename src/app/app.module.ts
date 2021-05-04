@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 
+import { BmiCalculatorService } from './bmi-calculator.service'
+
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.componen
     MatSliderModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [BmiCalculatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

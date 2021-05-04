@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BmiCalculatorService } from '../bmi-calculator.service';
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -10,9 +11,17 @@ export class BmiCalculatorComponent implements OnInit {
   height: number = 165;
   weight: number = 75;
   age: number = 25;
-  constructor() { }
+  gender: number = 1;
+  constructor(private bmiCalcService: BmiCalculatorService) { }
 
   ngOnInit(): void {
+  }
+
+  calculateBmi(){
+    if(this.gender == 1) 
+      this.bmiCalcService.calculateMaleBmi(this.height, this.weight);
+    else
+      this.bmiCalcService.calculateFemaleBmi(this.height, this.weight);
   }
 
   checkHeight(){
@@ -47,6 +56,16 @@ export class BmiCalculatorComponent implements OnInit {
 
   addAge(){
     if(this.age < 100) this.age += 1;
+  }
+
+  selectMale(){
+    this.gender = 1;
+    console.log(this.gender);
+  }
+
+  selectFemale(){
+    this.gender = 0;
+    console.log(this.gender);
   }
 
 }
