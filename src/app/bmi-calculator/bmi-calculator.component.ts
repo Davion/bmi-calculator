@@ -60,12 +60,10 @@ export class BmiCalculatorComponent implements OnInit {
 
   selectMale(){
     this.gender = 1;
-    console.log(this.gender);
   }
 
   selectFemale(){
     this.gender = 0;
-    console.log(this.gender);
   }
 
 }
