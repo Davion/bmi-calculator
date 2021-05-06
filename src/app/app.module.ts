@@ -8,19 +8,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 
-import { BmiCalculatorService } from './bmi-calculator.service'
+import { BmiCalculatorService } from './bmi-calculator.service';
+import { BmiResultComponent } from './bmi-result/bmi-result.component'
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BmiCalculatorComponent
+    BmiCalculatorComponent,
+    BmiResultComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { BmiCalculatorService } from './bmi-calculator.service'
     MatButtonModule,
     MatInputModule,
     MatSliderModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [BmiCalculatorService],
   bootstrap: [AppComponent]

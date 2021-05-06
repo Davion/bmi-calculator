@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BmiCalculatorService } from '../bmi-calculator.service';
+import { MatDialog } from '@angular/material/dialog';
+import { BmiResultComponent } from '../bmi-result/bmi-result.component';
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -12,16 +14,23 @@ export class BmiCalculatorComponent implements OnInit {
   weight: number = 75;
   age: number = 25;
   gender: number = 1;
-  constructor(private bmiCalcService: BmiCalculatorService) { }
+  constructor(private bmiCalcService: BmiCalculatorService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   calculateBmi(){
+    let result;
     if(this.gender == 1) 
-      this.bmiCalcService.calculateMaleBmi(this.height, this.weight);
+      // this.bmiCalcService.calculateMaleBmi(this.height, this.weight);
+      result = this.bmiCalcService.calculateMaleBmi(this.height, this.weight);
     else
-      this.bmiCalcService.calculateFemaleBmi(this.height, this.weight);
+      // this.bmiCalcService.calculateFemaleBmi(this.height, this.weight);
+      result = this.bmiCalcService.calculateFemaleBmi(this.height, this.weight);
+
+    this.dialog.open(BmiResultComponent, {
+      data: result
+    });
   }
 
   checkHeight(){
