@@ -29,7 +29,8 @@ export class BmiCalculatorComponent implements OnInit {
       result = this.bmiCalcService.calculateFemaleBmi(this.height, this.weight);
 
     this.dialog.open(BmiResultComponent, {
-      data: result
+      data: result,
+      panelClass: 'custom-modalbox'
     });
   }
 
