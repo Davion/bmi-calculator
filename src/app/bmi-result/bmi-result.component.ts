@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class BmiResultComponent implements OnInit {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: Number) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit(): void {
   }
