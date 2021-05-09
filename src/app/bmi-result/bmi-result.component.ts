@@ -8,6 +8,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class BmiResultComponent implements OnInit {
 
+  gender: string[] = ['Female', 'Male'];
   constructor(@Inject(MAT_DIALOG_DATA) public data) { }
 
   ngOnInit(): void {

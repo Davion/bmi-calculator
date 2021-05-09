@@ -2,8 +2,8 @@
 <mat-dialog-content >
     <mat-icon color="primary">check_circle</mat-icon>
     <span>{{ data.bmiResult }}</span>
-    <span>{{ data.gender }}</span>
+    <span>{{ data.gender > 0 ? gender[1] : gender[0]}}</span>
 </mat-dialog-content>
 <mat-dialog-actions>
-    <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" mat-dialog-close>Close</button>
 </mat-dialog-actions>
