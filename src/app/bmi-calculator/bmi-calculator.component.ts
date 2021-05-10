@@ -10,8 +10,8 @@ import { BmiResultComponent } from '../bmi-result/bmi-result.component';
 })
 export class BmiCalculatorComponent implements OnInit {
 
-  height: number = 165;
-  weight: number = 75;
+  height: number = 185;
+  weight: number = 85;
   age: number = 25;
   gender: number = 1;
   constructor(private bmiCalcService: BmiCalculatorService, private dialog: MatDialog) { }
@@ -31,7 +31,7 @@ export class BmiCalculatorComponent implements OnInit {
     this.dialog.open(BmiResultComponent, {
       data: {
         'bmiResult' : result,
-        'gender' : this.gender
+        'bmiGender' : this.gender
       },
       disableClose: true,
       autoFocus: true,

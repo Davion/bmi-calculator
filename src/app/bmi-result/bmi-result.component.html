@@ -1,8 +1,9 @@
 <h2 mat-dialog-title>BMI Result</h2>
 <mat-dialog-content >
-    <mat-icon color="primary">check_circle</mat-icon>
-    <span>{{ data.bmiResult }}</span>
-    <span>{{ data.gender > 0 ? gender[1] : gender[0]}}</span>
+    <mat-icon class="modal-icon" [style.color]="modalIconColor">{{ modalIcon }}</mat-icon>
+    <span class="bmi-result">{{ modalResult }}</span>
+    <span class="bmi-gender">{{ modalGender }}</span>
+    <span class="modal-message">{{ modalMessage }}</span>
 </mat-dialog-content>
 <mat-dialog-actions>
     <button mat-raised-button color="primary" mat-dialog-close>Close</button>
