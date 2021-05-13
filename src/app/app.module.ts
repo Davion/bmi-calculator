@@ -15,7 +15,9 @@ import { AppComponent } from './app.component';
 import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.component';
 
 import { BmiCalculatorService } from './bmi-calculator.service';
-import { BmiResultComponent } from './bmi-result/bmi-result.component'
+import { BmiResultComponent } from './bmi-result/bmi-result.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment'
 
 
 
@@ -35,7 +37,8 @@ import { BmiResultComponent } from './bmi-result/bmi-result.component'
     MatInputModule,
     MatSliderModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [BmiCalculatorService],
   bootstrap: [AppComponent]
