@@ -1,6 +1,20 @@
 # MbiCalculator
 
+This is a Progressive Web App for calculating BMI. It is available through the browser and can be used in Desktop and Mobile.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+
+
+# Desktop View
+![Desktop BMI Calculator](https://github.com/Davion/bmi-calculator/blob/main/images/bmi-calculator-desktop.png)
+
+# Mobile View
+![Mobile BMI Calculator](https://github.com/Davion/bmi-calculator/blob/main/images/bmi-calculator-mobile.png)
+![Mobile BMI Calculator Normal](https://github.com/Davion/bmi-calculator/blob/main/images/bmi-calculator-normal.png)
+![Mobile BMI Calculator Moderate](https://github.com/Davion/bmi-calculator/blob/main/images/bmi-calculator-moderate.png)
+![Mobile BMI Calculator Severe](https://github.com/Davion/bmi-calculator/blob/main/images/bmi-calculator-severe.png)
+
+
 
 ## Development server
 
