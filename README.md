@@ -1,4 +1,4 @@
-# MbiCalculator
+# BMI Calculator
 
 This is a Progressive Web App for calculating BMI. It is available through the browser and can be used in Desktop and Mobile.
 

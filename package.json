@@ -1,5 +1,5 @@
 {
-  "name": "mbi-calculator",
+  "name": "bmi-calculator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
