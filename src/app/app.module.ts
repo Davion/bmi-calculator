@@ -17,7 +17,8 @@ import { BmiCalculatorComponent } from './bmi-calculator/bmi-calculator.componen
 import { BmiCalculatorService } from './bmi-calculator.service';
 import { BmiResultComponent } from './bmi-result/bmi-result.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { UpdateModalComponent } from './update-modal/update-modal.component'
 
 
 
@@ -25,7 +26,8 @@ import { environment } from '../environments/environment'
   declarations: [
     AppComponent,
     BmiCalculatorComponent,
-    BmiResultComponent
+    BmiResultComponent,
+    UpdateModalComponent
   ],
   imports: [
     BrowserModule,

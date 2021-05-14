@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BmiCalculatorService } from '../bmi-calculator.service';
 import { MatDialog } from '@angular/material/dialog';
 import { BmiResultComponent } from '../bmi-result/bmi-result.component';
+// import { PwaService } from '../pwa.service';
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -37,6 +38,10 @@ export class BmiCalculatorComponent implements OnInit {
       autoFocus: true,
       panelClass: 'custom-modalbox'
     });
+  }
+
+  installPwa(): void {
+    // this.Pwa.promptEvent.prompt();
   }
 
   checkHeight(){
